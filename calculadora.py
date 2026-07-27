@@ -77,11 +77,12 @@ def main():
 
 
             case "5":
-                print(" Você decidiu sair...")
+                print(" Você escolheu por sair...")
                 print()
 
             case _:
                 print(" Valor inválido, tente novamente.")
+                print(" Tente novamente...")
                 print()
 
                       
