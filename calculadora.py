@@ -45,9 +45,39 @@ def main():
                 resultado = subtração(a,b)
                 print(f" {a} - {b} = {resultado}")
 
+            case "3":
+
+                while True:
+                    try:
+                        a = float(input(" Insira um número para realizar a subtração: "))
+                        b = float(input(" Insira um outro número para realizar a subtração: "))
+                        break
+                    except ValueError:
+                        print(" Valores incorretos, tente novamente.\n")
+
+                resultado = multiplicao(a,b)
+                print(f" {a} X {b} = {resultado}")
+
+            case "4":
+                while True:
+                    try:
+                        a = float(input(" Insira um número para realizar a divisão: "))
+                        b = float(input(" Insira um outro número para realizar a divisão: "))
+                        break
+                    except ValueError:
+                        print(" Valores incorretos, tente novamente.\n")
+                
+                resultado = divisao(a,b)
+
+                if resultado:
+                    print(f" {a} : {b} = {resultado}")
+
+                else:
+                    print(" Operação cancelada, divisão por 0.")
+
 
             case "5":
-                print(" Você escolheu sair...")
+                print(" Você decidiu sair...")
                 print()
 
             case _:
@@ -93,7 +123,40 @@ def subtração(a: float, b: float) -> float:
 
     return resultado
 
+def multiplicao(a: float, b: float) -> float:
+    """
+    Esta função recebe 2 números quaisquer e realiza a multiplicação entre eles.
+    
+    Args:
+        a (float) = Número qualquer que o usuário inseriu.
+        b (float) = Outro número qualquer que o usuário inseriu.
+    
+    Returns:
+        resultado (float) = Multiplicação entre os 2 números que o usuário inseriu.
+    
+    """
+    resultado = a * b
 
+    return resultado
+
+def divisao(a: float, b: float) -> float:
+    """ 
+    Esta função recebe 2 números quaisquer e realiza a divisão entre eles. 
+    Caso b seja igual a 0, cancela a operação e mostra uma mensagem na tela.
+        
+    Args:
+        a (float) = Número qualquer que o usuário inseriu.
+        b (float) = Outro número qualquer que o usuário inseriu.
+        
+    Returns:
+        resultado (float) = Multiplicação entre os 2 números que o usuário inseriu.
+    
+    """
+    if (b != 0):
+        resultado = a / b
+        return resultado
+    else:
+        return None
 
 
 
