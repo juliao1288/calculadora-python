@@ -153,6 +153,12 @@ def divisao(a: float, b: float) -> float:
         resultado (float) = Multiplicação entre os 2 números que o usuário inseriu.
     
     """
+
+    if (b != 0):
+        resultado = a / b
+        return resultado
+    else:
+        return None
    
 
 
